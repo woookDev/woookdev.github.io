@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Coding To Coding"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "WoookDev"
+name                     : "Coding To Coding Blog"
 description              : "Developing Learning"
 url                      : "https://woookdev.github.io"
  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "WoookDev"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Live as **Coded**"
+  bio              : "Do as **Code**"
   location         : "Seoul, Korea"
   email            :
   links:
