@@ -4,12 +4,13 @@ excerpt: "Install React JS On Mac using npx"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/instll_react_js.png
+  teaser: /assets/images/update_constraints.png
 categories:
-  - Development
+  - Programming
 tags:
-  - dev_Javascript
+  - Swift
 last_modified_at: 2021-04-07T08:06:00-05:00
+published: true
 ---
 
 ## updateConstraints 함수
