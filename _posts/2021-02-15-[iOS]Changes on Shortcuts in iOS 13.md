@@ -1,10 +1,39 @@
+---
+title: "#[iOS] Siri shortcut parameter 에 대하여 [Introducing Parameters for Shortcuts(WWDC19)]"
+excerpt: "iOS 13에서 변화된 Shortcut 관련 내용 정리"
+toc: true
+toc_sticky: true
+header:
+  teaser: /assets/images/update_constraints.png
+categories:
+  - Programming
+tags:
+  - Swift
+last_modified_at: 2021-01-07T08:06:00-05:00
+published: false
+---
+
 ## Changes on Shortcuts in iOS 13
+
+<center>
+<figure>
+<img src="/assets/images/shortcut_1.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
  iOS 12에서 Shortcut이 발표된 이후 Shortcut에 대한 개발자들의 요구를 반영하고 보다 Shortcut의 유저경험을 강화하기위한 변화가 iOS 13에서 있었다.
 
  먼저 기존에는 설정앱에서 관리해야 했던 Shortcut이지만 이제 Shortcut앱을 Built-in으로 독립적으로 제공하여 보다 Shortcut들을 관리하기 용이하게 되었고 Shortcut과 관련 폭넓은 커스터마이징이 가능하게 되었으며 기존 Siri에도 Siri Shortcut을 위한 UI가 추가되었다.
  
 ### Shortcut App
+
+<center>
+<figure>
+<img src="/assets/images/shortcut_2.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
  추가된 Shortcut앱은 총 3개의 탭으로 구성되어있다. 
  
