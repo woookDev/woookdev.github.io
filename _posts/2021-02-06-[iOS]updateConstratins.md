@@ -1,16 +1,17 @@
 ---
 title: "[iOS] updateConstraints"
-excerpt: "Install React JS On Mac using npx"
+excerpt: "updateConstraints 함수에 대한 정리"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/update_constraints.png
+  teaser: /assets/images/update_constraints
 categories:
   - Programming
 tags:
   - Swift
+  - auto-layout
 last_modified_at: 2021-01-07T08:06:00-05:00
-published: false
+published: true
 ---
 
 ## updateConstraints 함수
@@ -18,6 +19,13 @@ published: false
 뷰에서 layout 관련 이벤트 함수를 사용하게 되면 layoutSubviews 함수를 많이
 사용하게 되어 상대적으로 많이 활용되지 않는 함수라서 좀 더 알아보고 정리하고자
 한다.
+
+<center>
+<figure>
+<img src="/assets/images/update_constraint2.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 먼저, 애플 문서를 보면 매우 간단하게 정의되어 있다. 이름이 명시한 그대로 constraints를 업데이트 하는 함수. **Discusstion** 부분에 좀 더 살펴보면
 AutoLayout의 변화를 최적화하기 위해 override하여 사용하도록 하고 있다.
