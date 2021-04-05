@@ -4,7 +4,7 @@ excerpt: "updateConstraints 함수에 대한 정리"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/update_constraints
+  teaser: /assets/images/shortcut_3.png
 categories:
   - Programming
 tags:
@@ -41,3 +41,7 @@ layoutSubviews 함수와 유사한 trigger 함수를 가지고 있다. **updateC
 해당 함수를 override하여 사용하는 경우 마지막에 반드시 super 호출을 필요로하며 하지않고 하는 경우 Crash가 발생할 수 있다.
 
 또한 직접 해당 함수를 호출하기 보다는 trigger 함수를 통해 호출하는 것을 권장하고 있다.
+
+ > Reference
+ 
+ [관련 애플 문서](https://developer.apple.com/documentation/uikit/uiview/1622512-updateconstraints)
