@@ -3,9 +3,23 @@
 > 해당 포스트에서는 **Picker**만 다루고 **DatePicker**, **ColorPicker**는
 >  다른 포스트에서 다룰 예정임 (사실 거의 똑같지만... )
 
+<center>
+<figure>
+<img src="/assets/images/swiftui_picker_1.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 SwiftUI에서 Picker는 기존 UIKit 보다 확장된 기능을 제공하고 Annotation 문법(@Published, @State, @Binding)과 함께 보다 간편하게 Data Binding을 사용할 수 있다.
 <br>
 먼저 initialize 함수를 보면 3가지로 나뉜다.
+
+<center>
+<figure>
+<img src="/assets/images/clear_method1.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 Picker 자체로 보여지는 부분인 title, label 등을 하나로 보면 사실 3가지 Parameter를 가진다. 
 
@@ -17,12 +31,9 @@ Picker 자체로 보여지는 부분인 title, label 등을 하나로 보면 사
 예전 UIKit에서 picker와 관련 사용하려면 delegate을 필수로 사용하는 등 더 많이 코드가 사용된 반면 다음과 같이 보다 간편하게 사용할 수 있다.
 
 
-선택 보기 값과 관련해서는 위와 같이 enum을 사용하는 것이 직관적이고 가독성이 좋다. SwiftUI에서 Picker는 보다 다양한 Style을 ViewModifier를 통해 설정할 수 있다.
+
+선택 보기 값과 관련해서는 위와 같이 enum을 사용하는 것이 직관적이고 가독성이 좋다. 선택지 구현에서도 tag값을 설정해주기만 하면 되서 간단하다. 또한 SwiftUI에서 Picker는 보다 다양한 Style을 ViewModifier를 통해 설정할 수 있다.
 PickerStyle은 다음과 같이 여러가지로 존재한다.
-
-PopUpButtonPickerStyle
-
-<strike>also works in this forum</strike>
 
 ### DefaultPickerStyle
 
