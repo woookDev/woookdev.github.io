@@ -9,6 +9,7 @@ tags:
   - SwiftUI
   - iOS
   - Swift
+  - Picker
 last_modified_at: 2021-01-07T08:06:00-05:00
 published: true
 ---
@@ -140,5 +141,8 @@ iOS에서도 라디오 버튼을 제공하는 줄 알고 놀랐는데 mac OS에�
 
 SwiftUI가 나온지 얼마 되지 않았음에도 벌써 deprecated 되었다. 문서를 읽어보면 
 **MenuPickerStyle**를 대신 사용하라고 권장하는 것을 보면 대체된 것 같다. <strike>나오자 마자 대체된 비운의 Style</strike>
+
+> Reference <br >
+> [애플 문서](https://developer.apple.com/documentation/swiftui/)
 
 
