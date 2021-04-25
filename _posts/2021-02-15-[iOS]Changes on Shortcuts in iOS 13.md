@@ -143,7 +143,7 @@ xcode 업데이트와 iOS 14에서 추가적으로 수정된 것인지(?) 현재
 
 <center>
 <figure>
-<img src="/assets/images/shortcut_12.png" alt="">
+<img src="/assets/images/shortcut_13.png" alt="">
 <figcaption></figcaption>
 </figure>
 </center>
