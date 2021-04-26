@@ -116,3 +116,7 @@ Slider의 이동 바 색의 경우 accentColor modifier를 통해 수정할 수 
 예를 들어 기존  UISlider의 경우 다음과 같은 함수를 통해 thumb image를 변경하는 것이 가능했다. 하지만 SwiftUI Slider는 아직 초기 단계라서 제공하지 않은 것인지 modifier를 봐도 커스텀할 방법이 없었다. ( 물론 못찾은 것일 수도 있다,,, 하지만 따로 SliderStyle도 없고 SwiftUI 관련 커스텀 Slider library - Rectangle Circle 등을 사용하여.. - 가 많이 보이는 것을 보면 맞는 것 같다. )
 
 결국 SwiftUI Slider는 앞으로 따로 modifer가 제공되거나 여러 UIKit 우회를 통한 추가적인 커스텀 노력이 아니면 사용하는 경우는 디자인을 거의 그대로 쓰는 경우일 것 같다. 혹시 잘못된 정보나 향후 변화가 있다면 해당 포스트도 업데이트 하도록 하겠다.
+
+> Reference <br>
+>[애플문서](https://developer.apple.com/documentation/swiftui/slider) <br>
+>[hackingwithSwift](https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-a-slider-and-read-values-from-it)
