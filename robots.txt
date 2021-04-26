@@ -1,0 +1,3 @@
+ser-agent: *
+Allow: /
+Sitemap: http://woookdev.github.io/sitemap.xml
