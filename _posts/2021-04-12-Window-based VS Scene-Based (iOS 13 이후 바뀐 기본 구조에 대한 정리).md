@@ -15,8 +15,6 @@ last_modified_at: 2021-01-07T08:06:00-05:00
 published: true
 ---
 
-# [iOS] Window-based VS Scene-Based ( iOS 13 이후 바뀐 AppDelegate, SceneDelegate 기본 구조에 대한 정리 )
-
 
 ## iOS 12와 그 이전 Window-based
 
