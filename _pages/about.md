@@ -17,9 +17,10 @@ Jaewook Hwang (David)
 **Brief History**  
 - 한국외대 서울캠퍼스 졸업 ( 페르시아어, 융복합 소프트웨어 ) 
 - Fastcampus iOS Camp 수료 및 프로젝트 참여 ( 2017.9 ~ 2018.3 )
-- Mathpresso iOS 개발자 ( 2018.6 ~ 2020.12 )
--  Let'Swift 2018 발표자로 참여 ( 2018.11 )
-- DDD 5기 사이드 프로젝트 참여 ( 2020.3 ~ )
+- Mathpresso iOS Developer [Qanda App] ( 2018.6 ~ 2020.12 )
+- Let'Swift 2018 발표자로 참여 ( 2018.11 )
+- DDD 5기 사이드 프로젝트 참여 ( 2021.3 ~ 2021.5 )
+- BirdView iOS Developer [화해 App] ( 2021.5 ~ 현재 )
 
 > Contact Me<br>
 > **codism365@gmail.com**
