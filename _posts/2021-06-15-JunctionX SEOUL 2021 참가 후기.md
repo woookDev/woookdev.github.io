@@ -42,12 +42,12 @@ published: true
 
 <center>
 <figure>
-<img src="/assets/images/junctionx_3.png" alt="">
+<img src="/assets/images/junctionx_3.jpg" alt="">
 <figcaption></figcaption>
 </figure>
 </center>
 
-일단 처음으로 JunctionX SEOUL 2021 소식을 알게된 건 사이드 프로젝트 모임인 DDD에서 JunctionX SEOUL 2021 해커톤에 관심있는 분들 참가하라는 글을 지난 대회에 참가하신 분이 올려주셔서 알게되었다. 이틀이라는 시간동안 참가하는데 온라인이라는 사실이 다소 걸려서 ( 오프라인이 꿀잼 ) 작년에도 듣기만 하고 내년에 오프라인하면 해야지 했는데 올해도... 온라인이라는 사실에 고민이 되었다. ( 신청한다고 뽑히는 것도 아닌데 설레발 ) 결국 당시 이직을 위해 지원한 회사 면접일도 수정하면서 참가 신청을 했다. 
+JunctionX SEOUL 작년 대회 때 들어보긴 했지만 일단 처음으로 JunctionX SEOUL 2021 소식을 알게된 건 사이드 프로젝트 모임인 DDD에서 JunctionX SEOUL 2021 해커톤에 관심있는 분들 참가하라는 글을 지난 대회에 참가하신 분이 올려주셔서 알게되었다. 이틀이라는 시간동안 참가하는데 온라인이라는 사실이 다소 걸려서 ( 오프라인이 꿀잼 ) 작년에도 듣기만 하고 내년에 오프라인하면 해야지 했는데 올해도... 온라인이라는 사실에 고민이 되었다. ( 신청한다고 뽑히는 것도 아닌데 설레발 ) 결국 당시 이직을 위해 지원한 회사 면접일도 수정하면서 참가 신청을 했다. 
 
 <center>
 <figure>
@@ -234,7 +234,7 @@ MS 주제는 듣다가 포기해야 겠다는 생각이 들었는데 이유는 M
 
 <center>
 <figure>
-<img src="/assets/images/junctionx_23.png" alt="">
+<img src="/assets/images/junctionx_23.PNG" alt="">
 <figcaption></figcaption>
 </figure>
 </center>
