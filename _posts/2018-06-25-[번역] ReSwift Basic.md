@@ -1,6 +1,6 @@
 ---
 title: "[Redux in iOS] ReSwift(번역)"
-excerpt: "SwiftUI Picker 알아보는 글"
+excerpt: "[Redux in iOS] ReSwift"
 toc: true
 toc_sticky: true
 categories:
