@@ -1,5 +1,5 @@
 ---
-title: "[iOS] UITouch, UIEvent 탐구하기 ( iOS touch event 관련 정리"
+title: "[iOS] UITouch, UIEvent 탐구하기 ( iOS touch event 관련 정리 )"
 excerpt: "[iOS] UITouch, UIEvent 탐구하기"
 toc: true
 toc_sticky: true
