@@ -21,6 +21,7 @@ Jaewook Hwang (David)
 - Let'Swift 2018 발표자로 참여 ( 2018.11 )
 - DDD 5기 사이드 프로젝트 참여 ( 2021.3 ~ 2021.5 )
 - BirdView iOS Developer [화해 App] ( 2021.5 ~ 현재 )
+- DDD 6기 사이드 프로젝트 모임 iOS 운영진 ( 2021.5 ~ )
 
 > Contact Me<br>
 > **codism365@gmail.com**
