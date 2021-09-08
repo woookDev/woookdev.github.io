@@ -1,6 +1,29 @@
-## [iOS] UITouch, UIEvent 탐구하기 ( iOS touch event 관련 정리 )
+---
+title: "[iOS] UITouch, UIEvent 탐구하기 ( iOS touch event 관련 정리"
+excerpt: "[iOS] UITouch, UIEvent 탐구하기"
+toc: true
+toc_sticky: true
+categories:
+  - Programming
+tags:
+  - iOS
+  - UIView
+  - UITouch
+  - UIEvent 
+last_modified_at: 2021-09-07T08:06:00-05:00
+published: true
+---
 
-## AlMighty Touch 
+
+## Almighty Touch 
+
+<center>
+<figure>
+<img src="/assets/images/touch_1.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 
 모바일 기기에서 touch는 단순한 interaction 이상의 의미를 지니고 있다. 가장 기본적인 유저와서 소통이자 Long press touch 등 여러 방법으로 의미 확장이 가능하기도 하다. 심지어 패드에서는 애플 펜슬과 트랙 패드 등을 통한 더 큰 활용이 가능해지도 한다. ( touch가 아닌 hover도 전달 가능해진다. )
 
@@ -8,7 +31,22 @@ iOS 개발에서 이뤄지는 touch event는 보통 버튼이나 Gesture를 통�
 
 ## Touch Delivery Process
 
+<center>
+<figure>
+<img src="/assets/images/touch_3.jpeg" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 화면에서 하나든 여러개이든 touch가 일어나고 다시 touch-free가 되기까지를 하나의 Multi-touch sequence로 본다. 시스템에서는 이러한 sequence 동안 touch 정보의 configuration의 변화를 특정 객체로 계속 앱에 전달한다.
+
+<center>
+<figure>
+<img src="/assets/images/touch_4.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 
 실제 내부 구현에 대해 살펴보면 위의 **UITouch** 클래스로 touch 정보가 전달되어 이뤄진다. 
 
@@ -19,7 +57,23 @@ iOS 개발에서 이뤄지는 touch event는 보통 버튼이나 Gesture를 통�
 
 ## UITouch.Phase
 
+<center>
+<figure>
+<img src="/assets/images/touch_5.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
+
 하나의 Multi-touch sequence에서 전달되는 touch 상태 정보는 주요하게 **UITouch.Phase** 타입의 정보가 있다. **UITouch** instance는 phase라는 **UITouch.Phase** 타입의 프로퍼티가 존재하고 총 5가지의 case로 구성된다.
+
+<center>
+<figure>
+<img src="/assets/images/touch_6.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 
 ### .began
 처음으로 touch가 이뤄지는 순간에 대한 정보이다. **UITouch** 객체가 생성되고 처음 phase이기 때문에 해당 touch에 대해 처음 한번만 전달된다.
@@ -44,7 +98,21 @@ iOS 개발에서 이뤄지는 touch event는 보통 버튼이나 Gesture를 통�
 
 ## UITouch, UIEvent 추가 정보
 
+<center>
+<figure>
+<img src="/assets/images/touch_7.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 touch를 받는 **UIResponder**가 사실상 보여지는 부분이 존재하는 **UIView** 형태로 받으므로 **UITouch** instance에는 touch가 이뤄질 때 view라는 프로퍼티에 touch를 받는 **UIView**를 할당하게 된다.
+
+<center>
+<figure>
+<img src="/assets/images/touch_added.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 **UIEvent**는 1대다 구조로 **UITouch**를 저장한다. 위와 같이 allTouches라는 프로퍼티로 Set 형태로 저장하게되고 따라서 하나의 View에 대한 touch가 아닌 다양한 View에 대한 touch가 하나의 **UIEvent** 객체에 담기는 것도 가능하다.
 
@@ -52,7 +120,21 @@ touch를 받는 **UIResponder**가 사실상 보여지는 부분이 존재하는
 
 ## UIResponder touch-receiving methods
 
+<center>
+<figure>
+<img src="/assets/images/touch_8.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 **UIView(UIResponder)** 는 touch를 받는 것과 관련 4가지 내부 함수가 존재한다. 4가지는 **UITouch**의 Phase 정보와도 관련이 된다. 정확하게는 **UIEvent**를 4가지 함수를 통해 전달받는다.
+
+<center>
+<figure>
+<img src="/assets/images/touch_9.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 ### touchesBegan(_:with)
 **.began**과 동일하게 처음 touch가 발생하고 **UITouch**가 생성될 때 불리는 함수이다.
@@ -83,7 +165,21 @@ override func touches_____(_ touches: Set<UITouch>, with event: UIEvent?) {
 
 ## UITouch properties & methods
 
+<center>
+<figure>
+<img src="/assets/images/touch_10.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 **UITouch**에는 유용하게 활용할 수 있는 method와 property가 많이 존재한다. 
+
+<center>
+<figure>
+<img src="/assets/images/touch_11.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 ### Method -  location(in:), previousLocation(in:)
 touch가 이뤄진 좌표값을 구할 수 있는 method로 이동된 좌표들을 활용하여 touch될 때 View를 이동하거나 애니메이션이 구현할 때 많이 활용된다. parameter로는 좌표의 coordinate 대상이 되는 View를 전달하는데 optional이라서 nil로 전달하게 되면 window를 기준으로 한 좌표값을 반환한다.
@@ -109,10 +205,25 @@ override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
 
 ## UIEvent properties & methods
 
+<center>
+<figure>
+<img src="/assets/images/touch_12.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 ### Method -  touches(for view:)
 특정 view에서만 발생한 touch들만 반환해준다.
 
 ### Property - type
+
+<center>
+<figure>
+<img src="/assets/images/touch_13.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 ```swift
 public enum EventType : Int {
         case touches = 0
@@ -141,7 +252,18 @@ public enum EventType : Int {
 
 ## UIView's isExclusiveTouch
 
+<center>
+<figure>
+<img src="/assets/images/touch_14.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 **isExclusiveTouch** 프로퍼티는 유저 인터렉션과 관련되어서 인지 **isUserInteractionEnabled** 처럼 **UIResponder**가 아닌 UIView에 존재한다. 해당 프로퍼티는 독자적으로 하나 뷰의 touch만 발생하게 하려고 할 때 유용하다. 예를 들어 두개의 버튼이 붙어서 존재하는데 절대 동시에 누르면 안되는 상황이라고 한다면 두 버튼 모두 해당 값을 true로 해줘서 해당 View의 touch event sequence가 발생하는 동안 window 내에 다른 View의  touch event sequence가 발생하지 않도록 만들 수 있다.
 
+
+> Reference <br>
+> [Apple Documentation - Touches, Presses, and Gestures](https://developer.apple.com/documentation/uikit/touches_presses_and_gestures) <br>
+> [Blog - iOS ) UIView > Configuring the Event-Related Behavior](https://zeddios.tistory.com/670 [ZeddiOS)
 
 
