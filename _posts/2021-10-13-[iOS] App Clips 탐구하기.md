@@ -1,4 +1,21 @@
-# [iOS] App Clips 탐구하기
+---
+title: "[iOS] App Clips 탐구하기"
+excerpt: "[iOS] App Clips 탐구하기"
+toc: true
+toc_sticky: true
+categories:
+  - Programming
+tags:
+  - WWDC
+  - App Clips
+  - Swift
+
+last_modified_at: 2021-10-13T08:06:00-05:00
+published: true
+---
+
+
+## App Clips?
 
 WWDC 2020에서 발표된 iOS의 App Clips는 게임회사를 비롯한 많은 회사에서 유저에게 앱을 체험할 수 있는 도구로 사용되고 있다.
 
