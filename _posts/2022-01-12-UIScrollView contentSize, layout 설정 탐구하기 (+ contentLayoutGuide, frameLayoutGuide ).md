@@ -1,7 +1,46 @@
-## UIScrollView contentSize, layout 설정 탐구하기 (+ contentLayoutGuide, frameLayoutGuide )
+---
+title: "UIScrollView contentSize, layout 설정 탐구하기 (+ contentLayoutGuide, frameLayoutGuide )"
+excerpt: "UIScrollView contentSize, layout 설정 탐구하기 (+ contentLayoutGuide, frameLayoutGuide )"
+toc: true
+toc_sticky: true
+categories:
+  - Programming
+tags:
+  - iOS
+  - Swift
+  - UIKit
+  - UIScrollView
+last_modified_at: 2022-01-12T08:06:00-05:00
+published: true
+---
+
+
+
+## UIScrollView의 중요한 역할
+
+<center>
+<figure>
+<img src="/assets/images/scrollview_1.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 
  앱을 개발하면서 UI 작업을 하다보면 복잡하거나 까다로운 요구사항을 가진 Layout을 마주하게 되는 경우 UIScrollView와 함께 커스텀하면 해결책이 풀리는 아이디어가 생각나거나 실제로 풀리는 경우가 많이 있다. 실제로도 많은 화려하거나 유용한 UI 오픈소스의 경우 UIScrollView를 현명하게 잘 사용하여 만든 경우를 쉽게 발견할 수 있다. <br />
 
+<center>
+<figure>
+<img src="/assets/images/scrollview_2.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
+<center>
+<figure>
+<img src="/assets/images/scrollview_3.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 UIScrollView는 iOS UI 개발에서 없어서는 안될 UITableView, UICollectionView의 기반이 되기도 한다.
 이러한 UIScrollView에 대한 세세한 부분들을 고찰(?)하고 정리하고자 하는 글이다. 먼저 UIScrollView contentSize 설정에 대한 부분을 정리하고자 한다. 여러가지 찾아보면서 뷰 구현에 활용하다보니 이미 잘 알고 있다고 생각하는 부분도 새로운 iOS 버전을 통해 계속 새롭게 추가된 부분과 함께 더 좋은 활용방안을 발견하기도 해서 글로 정리할 필요가 더욱 느껴졌다.
@@ -38,6 +77,13 @@ imageView.frame = CGRect(x: 0, y: 0, width: 800, height: 2000)
 // 직접 contentSize 정해서 주기
 scrollView.contentSize = CGSize(width: 800, height: 2000)
 ```
+
+<center>
+<figure>
+<img src="/assets/images/scrollview_moving.gif" alt="" style="width:300px;"/>
+<figcaption></figcaption>
+</figure>
+</center>
 
 위에서 contentSize를 설정하는 부분을 제거하면 스크롤이 불가능하게 된다.
 하지만 스크롤뷰의 contentOffset를 통해 코드상으로 스크롤은 가능하다.
@@ -82,7 +128,14 @@ NSLayoutConstraint.activate([
 ])
 ```
 
-> 이 방식은 사실 바로 하위 subview로 하기보다는 내부에 contentView 목적의 UIView를 하나 addSubview하고 top, leading, trailing, bottom을 autolayout으로 걸어서 그 하위에 subview들의 autolayout 사이즈 설정으로 정하는 방식이 더 일반적이다. 물론 UIStackView 활용도 가능하고 훨씬 많은 활용도를 가진다.
+<center>
+<figure>
+<img src="/assets/images/scrollview_moving.gif" alt="" style="width:300px;"/>
+<figcaption></figcaption>
+</figure>
+</center>
+
+> 이 방식은 사실 바로 하위 subview로 하기보다는 내부에 contentView 목적의 UIView를 하나 addSubview하고 top, leading, trailing, bottom을 autolayout으로 걸어서 그 하위에 subview들의 autolayout 사이즈 설정으로 정하는 방식이 더 일반적이다. 물론 contentView 역할로 UIStackView 활용도 가능하고 훨씬 많은 활용도를 가진다.
 
 #### iOS 11부터 제공하는 **contentLayoutGuide** 활용
 
@@ -120,6 +173,14 @@ NSLayoutConstraint.activate([
 
 위와 같이 수정하여도 똑같이 UIScrollView 내부 bounds와의 관계 맺기위한 목적으로 contentLayoutGuide를 올바르게 사용하였기 때문에 기존과 동일하게 구현된다.
 
+<center>
+<figure>
+<img src="/assets/images/scrollview_moving.gif" alt="" style="width:300px;"/>
+<figcaption></figcaption>
+</figure>
+</center>
+
+
 #### iOS 11부터 제공하는 **frameLayoutGuide** 활용
 
 위에서 설명한 contentLayoutGuide과 다르게 UIScrollView가 보여지는 frame과 관계를 맺기위해 iOS 11부터 제공하는 layoutGuide가 frameLayoutGuide이다. 예를 들어 contentLayoutGuide으로 layout 설정을 한다고 생각하면 UIScrollView가 스크롤되어도 그 자리에 머물러있어야 하는 floating 버튼 같은 경우 구현이 어렵다. 이 경우에는 UIScrollView가 보여지는 frame과 관계를 맺을 수 있는 frameLayoutGuide를 사용하면 된다. 
@@ -154,6 +215,14 @@ NSLayoutConstraint.activate([
 ```
 
 위와 같이 기존 코드를 contentLayoutGuide에서 frameLayoutGuide으로 바꾸게되면 전혀 스크롤이 안되게 구현된다. 딱 UIScrollView 보여지는 프레임에 맞춰서 이미지 레이아웃을 설정하게 된다.
+
+<center>
+<figure>
+<img src="/assets/images/scrollview_last.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 
 따라서 iOS 11부터 제공하는 contentLayoutGuide, frameLayoutGuide를 잘 활용하면 UIScrollView의 내부 contents를 좀 더 원하는 방향으로 어렵지 않게 구성하는 것이 가능하다.
 
