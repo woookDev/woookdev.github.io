@@ -20,7 +20,7 @@ published: true
 
 <center>
 <figure>
-<img src="/assets/images/scrollview_1.png" alt="">
+<img src="/assets/images/scrollview_first.png" alt="">
 <figcaption></figcaption>
 </figure>
 </center>
