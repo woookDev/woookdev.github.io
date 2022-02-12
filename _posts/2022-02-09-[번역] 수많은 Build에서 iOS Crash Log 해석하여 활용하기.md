@@ -8,12 +8,9 @@ categories:
 tags:
   - iOS
   - Debug
-  - CrashLOG
-
 last_modified_at: 2022-02-09T08:06:00-05:00
 published: true
 ---
-
 
 
 >해당 글은 [Ferlix Yanto Wang](https://medium.com/@ferlixyantowang) 의 [medium 포스트](https://medium.com/tokopedia-engineering/facilitate-your-ios-crash-log-translation-for-numerous-builds-
