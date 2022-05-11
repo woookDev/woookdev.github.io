@@ -100,7 +100,7 @@ iOS 개발 아니 더 나아가서 모바일 개발에 있어서도 iOS는 Alamo
 
 ### URLSessionTaskMetrics 구현하여 정보 살펴보기
 
-`URLSessionDelegate`을 통해 다음 함수로 metric 값을 확인 할 수 있다.
+`URLSessionDelegate`을 통해 다음 delegate 함수로 metric 값을 확인 할 수 있다.
 
 ```swift
 func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics)
