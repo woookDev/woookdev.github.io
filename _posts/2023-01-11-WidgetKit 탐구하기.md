@@ -14,7 +14,25 @@ published: true
 
 ## WidgetKit 탐구하기 - WidgetFamily, TimeLineEntry, TimeLineProvider
 
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_1.webp" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 기존 iOS에서는 Today Extension이라는 이름으로 지금보다 국한된 Widget을 사용했지만 iOS 14 이후 iOS에서 Widget으로 통칭되고 WidgetKit을 통해 다양한 크기와 디자인의 위젯을 활용할 수 있게 되었다. 지속적으로 업데이트되는 정보를 확인할 수 있고 필요한 경우 간단한 설정 및 interaction이 가능하고 tap으로 앱으로 이동하게 된다.
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_2.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 WidgetKit으로 위젯을 구현하기 위해서는 SwiftUI를 사용해야하고 구현을 위한 개념과 관련 객체들을 이해해야 한다.
 
