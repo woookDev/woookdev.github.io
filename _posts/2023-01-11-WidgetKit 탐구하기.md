@@ -85,15 +85,51 @@ Widget 구현을 위해서 먼저 Target을 추가하는 것은 어렵지 않다
 
 추가하면서`Configuration Intent`를 포함하는지 여부를 체크하게 되는데 이 부분은
 
-위와 같이 유저가 편집, 설정할 수 있는 위젯을 구현하는 경우 check를 풀고 `StaticConfiguration`으로 구현하면 되고
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_7.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
+위와 같이 유저가 편집, 설정하는 기능을 제공하지 않는 위젯을 구현하는 경우 check를 풀고 `StaticConfiguration`으로 구현하면 되고
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_8.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 유저가 편집, 설정을 할 수 있는 위젯을 구현하는 경우 체크하여 `IntentConfiguration`으로 구현하게 된다.
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_9.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 마지막으로 위젯 scheme을 activate할 지 여부를 묻는 팝업이 나오고 Widget Target 추가를 마무리하게 된다.
 
 일단은 `StaticConfiguration`으로 진행하는 경우 구성하는 객체에 대해 설명하고자 한다.
 
 ### TimeLineEntry
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_10.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 위젯을 사용하는 유저는 보통 지속적으로 정보를 확인할 수 있는 목적으로 사용하기에 해당 정보를 보여주는 시간에 대한 부분이 위젯에서 핵심적인 부분일텐데 이와 관련된 Protocol이 바로 TimeLineEntry이다. 따라서 Protocol 선언부를 살펴보면 언제 보여줄지, 업데이트할지를 나타내는 `date` 프로퍼티를 가지고 있고 위젯을 구현할 때 위젯에서 보여주는 정보에 대한 객체, 모델은 이 Protocol을 만족해야 한다. 
 
@@ -111,9 +147,11 @@ struct CoinInfo: Codable, Identifiable, TimelineEntry {
 
 ### TimeLineProvider
 
-다음으로 위와 같이 `TimelineEntry` 를 구성하고 나면 `TimelineEntry`의 `date` 값을 통해 언제 위젯을 보여줘야 할 지 알려주는 Protocol이 `TimeLineProvider `이다. 해당 Protocol은 총 3가지 함수로 구성된다. 
+다음으로 `TimelineEntry` 를 구성하고 나면 `TimelineEntry`의 `date` 값을 통해 언제 위젯을 보여줘야 할 지 알려주는 Protocol이 `TimeLineProvider `이다. 해당 Protocol은 총 3가지 함수로 구성된다. 
 
 #### func placeholder(in context: Self.Context) -> Self.Entry
+
+
 
 위 함수는 말그대로 placeholder `TimelineEntry `를 제공하기 위한 함수이다. 특별한 정보를 display 할 수 없을 때 기본적으로 보여주는 placeholder를 구성하게 된다. 또한 위젯 데이터가 로딩되는 동안이나 처음 위젯이 나타날 경우에도 해당 placeholder `TimelineEntry `로 구성되게 된다.
 
