@@ -9,7 +9,7 @@ tags:
   - iOS
   - WidgetKit
 last_modified_at: 2023-01-19T08:06:00-05:00
-published: false
+published: true
 ---
 
 ## WidgetKit 탐구하기 - WidgetFamily, TimeLineEntry, TimeLineProvider
@@ -193,6 +193,15 @@ struct CoinInfo: Codable, Identifiable, TimelineEntry {
 
 
 `TimelineReloadPolicy`는 총 3가지로 나뉜다. 
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_14.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 - never
 
