@@ -14,8 +14,6 @@ published: true
 
 ## WidgetKit 탐구하기 - WidgetFamily, TimeLineEntry, TimeLineProvider
 
-<hr>
-
 <center>
 <figure>
 <img src="/assets/images/widgetkit_1.webp" alt="">
@@ -161,6 +159,15 @@ struct CoinInfo: Codable, Identifiable, TimelineEntry {
 </center>
 
 위 함수는 말그대로 placeholder `TimelineEntry `를 제공하기 위한 함수이다. 특별한 정보를 display 할 수 없을 때 기본적으로 보여주는 placeholder를 구성하게 된다. 또한 위젯 데이터가 로딩되는 동안이나 처음 위젯이 나타날 경우에도 해당 placeholder `TimelineEntry `로 구성되게 된다.
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_12.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 #### func getSnapshot(in context: Self.Context, completion: @escaping (Self.Entry) -> Void)
 
