@@ -7,8 +7,8 @@ categories:
   - Programming
 tags:
   - iOS
-  - Widget
-last_modified_at: 2023-01-11T08:06:00-05:00
+  - WidgetKit
+last_modified_at: 2023-01-19T08:06:00-05:00
 published: true
 ---
 
