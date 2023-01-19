@@ -38,16 +38,50 @@ WidgetKit으로 위젯을 구현하기 위해서는 SwiftUI를 사용해야하�
 
 ### WidgetFamily
 
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_3.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
+
 Widget의 사이즈를 정의한 enum으로 총 3가지로 구분된다. `systemSmall`, `systemMedium`, `systemLarge` 3가지로 구성되고 각각 크기에 따라 다르게 나타난다.
 
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_4.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 `.supportedFamilies` 함수를 통해 위젯 구현 시 지원하는 사이즈만 배열로 전달하면 구현하는 위젯이 어떤 사이즈까지 지원할 지 정할 수 있다.
 
 
 ### Widget Target 추가하기
 
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_5.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 Widget 구현을 위해서 먼저 Target을 추가하는 것은 어렵지 않다. File ➤ New ➤ Target ➤ iOS 로 가서 위와 같이 `Widget Extension` 을 추가하면 된다. 
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_6.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 추가하면서`Configuration Intent`를 포함하는지 여부를 체크하게 되는데 이 부분은
 
