@@ -160,6 +160,8 @@ struct CoinInfo: Codable, Identifiable, TimelineEntry {
 
 위 함수는 말그대로 placeholder `TimelineEntry `를 제공하기 위한 함수이다. 특별한 정보를 display 할 수 없을 때 기본적으로 보여주는 placeholder를 구성하게 된다. 또한 위젯 데이터가 로딩되는 동안이나 처음 위젯이 나타날 경우에도 해당 placeholder `TimelineEntry `로 구성되게 된다.
 
+#### func getSnapshot(in context: Self.Context, completion: @escaping (Self.Entry) -> Void)
+
 <hr>
 
 <center>
@@ -169,8 +171,6 @@ struct CoinInfo: Codable, Identifiable, TimelineEntry {
 </figure>
 </center>
 
-#### func getSnapshot(in context: Self.Context, completion: @escaping (Self.Entry) -> Void)
-
 애플 문서에 따르면 위젯에서 `TimelineEntry ` 정보를 요청하는 경우는 총 2가지이다.
 
 1. 즉각적으로 `TimelineEntry`를 보여주기 위한 **현재 상태에 대한 `TimelineEntry` 단일 객체 요청**
@@ -179,6 +179,15 @@ struct CoinInfo: Codable, Identifiable, TimelineEntry {
 두가지 중에서 `getSnapshot ` 함수의 경우는 첫번째 경우에 해당하는 함수이다. 즉, 현재를 반영하는 `TimelineEntry`를 바로 필요로 하는 경우 해당 함수를 통해 요청하는 것으로 보면 된다. 이러한 `TimelineEntry` 단일 객체가 필요한 경우는 일단 문서를 찾아봐도 위젯을 추가할 때 미리보여주는 **Preview** 를 위한 경우만 예시로 나와있다. 다른 경우는 어떤 경우가 또 존재하는지는 찾아봐야 할 것 같다.
 
 #### func getTimeline(in context: Self.Context, completion: @escaping (Timeline<Self.Entry>) -> Void)
+
+<hr>
+
+<center>
+<figure>
+<img src="/assets/images/widgetkit_13.png" alt="">
+<figcaption></figcaption>
+</figure>
+</center>
 
 위에서 설명한 `TimelineEntry`를 필요로 하는 두번째 경우로 `TimeLine`이라는 객체를 completion closure로 전달한다.  `TimeLine`는 `TimelineEntry`의 배열과 시간 정책에 대한 `TimelineReloadPolicy` 객체를 포함하는 객체이다.
 
